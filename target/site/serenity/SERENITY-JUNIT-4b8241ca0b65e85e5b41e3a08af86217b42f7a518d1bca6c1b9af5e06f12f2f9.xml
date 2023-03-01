@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Funcionalidad Checkout Open Cart" skipped="0" tests="1" time="56.13" timestamp="2023-01-17 10:52:04"><testcase name="Validar que la orden de un producto fue exitosa"><failure message="Expected enabled element was not enabled&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-S648JUH', ip: '192.168.1.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-S648JUH', ip: '192.168.1.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: unknown</failure><system-err>Expected enabled element was not enabled
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-S648JUH', ip: '192.168.1.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: unknown&#13;
+pageobject.Home.searchProduct(Home.java:31)&#13;
+stepsdefinitions.OpenCarStepsDefinitions.buscaElProductoYAgregoAlCarrito(OpenCarStepsDefinitions.java:26)&#13;
+✽.busca el producto iPhone y agrego al carrito(file:///C:/Users/usuario/IdeaProjects/Clase5SW/src/test/resources/features/opencart.feature:10)&#13;
+</system-err></testcase></testsuite>
