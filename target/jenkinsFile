@@ -1,0 +1,52 @@
+pipeline {
+    agent any
+
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "maven_3.8.5"
+    }
+
+    stages {
+        stage('Checkout from GitHub'){
+        steps{
+     // Get some code from a GitHub repository
+        git branch: 'main',
+        credentialsId: 'GustavoQA',
+        url: 'https://github.com/GustavoQA/Serenity-ProyectoGuz.git'
+         }
+    }
+    stage('Fase: Contruccion from GitHub'){
+    steps{
+         bat 'mvn clean install -DskipTests'
+    }
+   }
+    stage('Fase: Compilar codigo'){
+           steps{
+                bat 'mvn clean compile'
+           }
+       }
+        stage(' Fase: Ejecutar Pruebas Automatizadas Serenity') {
+            steps {
+                // Get some code from a GitHub repository
+                //git 'https://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@github.com/GustavoQA/restAssuredToken.git'
+
+                // Run Maven on a Unix agent.
+                //sh "mvn -Dmaven.test.failure.ignore=true clean package"
+
+                // To run Maven on a Windows agent, use
+                // bat 'mvn clean verify -Dtags="@regresion-success"'
+                bat 'mvn clean verify'
+            }
+        }
+
+           stage('Fase: Generar Reporte Serenity') {
+           steps{
+           bat 'mvn serenity:aggregate'
+           }
+
+           }
+
+
+    }
+
+}
