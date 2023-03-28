@@ -22,7 +22,7 @@ pipeline {
    }
     stage('Fase: Compilar codigo'){
            steps{
-                bat 'mvn clean compile'
+                bat 'mvn clean package'
            }
        }
         stage(' Fase: Ejecutar Pruebas Automatizadas Serenity') {
@@ -35,7 +35,8 @@ pipeline {
 
                 // To run Maven on a Windows agent, use
                 // bat 'mvn clean verify -Dtags="@regresion-success"'
-                bat 'mvn clean verify'
+                //bat 'mvn clean verify'
+                bat 'mvn clean verify "-Dcucumber.options=--tags @regresion-success"'
             }
         }
 

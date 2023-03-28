@@ -15,6 +15,6 @@ Feature: Funcionalidad Checkout Open Cart
       Then verifica y confirma la orden de compra
       Examples:
         | producto | optionCustomer   | nombre | apellido | email            | telefono  | direccion      | ciudad    | descripcion   | metodoPago       |
-        | iPhone   | Guest Checkout   | Erick  | Montes   | montes@gmail.com | 969929157 | Jiron Salavery | Surquillo | Enviar rápido | Cash On Delivery |
+        | iPhone   | Guest Checkout   | Erick  | Montes   | montes@gmail.com | 969929157 | Jiron Salavery | Surquillo | Enviar rapido | Cash On Delivery |
 #        | iPhone   | Register Account | Pablo  | Montes   | montes@gmail.com | 969929157 | Jiron Salavery | Surquillo | Enviar rápido | Cash On Delivery |
 
